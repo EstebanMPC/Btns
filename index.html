@@ -9,37 +9,67 @@
         *{
             margin:0;
             padding: 0;
-            height: 100%;
-            width: 100%;
+            box-sizing: border-box;
         }
 
-        .toggle{
-            background-color: #333;
-            height: 80px;
-            width: 80px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        html, body {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
         }
-        .flex {
-            display: flex;
-            flex-direction: row;
+
+        .wrapper .button {
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            float: left;
+            margin: 0 5px;
+            overflow: hidden;
+            background-color: red;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-out;
+        }
+
+        .wrapper .button:hover{
+            width: 200px;
+        }
+
+        .wrapper .button .icon {
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            border-radius: 50px;
+            box-sizing: border-box;
+            line-height: 60px;
+        }
+        .wrapper .button .icon i{
+            font-size: 25px;
+            line-height: 60px;
+        }
+        .wrapper .button span{
+            font-size: 20px;
+            font-weight: 500px;
+            line-height: 60px;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
     
-    <button>
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="752pt" height="752pt" version="1.1" viewBox="0 0 752 752">
+    <div class="wrapper">
+        <div class="button">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" version="1.1" viewBox="0 0 752 752">
                 <path
                     d="m278.5 389.93h83.574v83.574c0 8.3555 5.5703 13.93 13.93 13.93 8.3555 0 13.93-5.5703 13.93-13.93v-83.574h83.574c8.3555 0 13.93-5.5703 13.93-13.93 0-8.3555-5.5703-13.93-13.93-13.93h-83.574v-83.574c0-8.3555-5.5703-13.93-13.93-13.93-8.3555 0-13.93 5.5703-13.93 13.93v83.574h-83.574c-8.3555 0-13.93 5.5703-13.93 13.93s5.5703 13.93 13.93 13.93z" />
-            </svg>
-            <h3>View Products</h3>
-        </span>
-        <span></span>
-    </button>
+                </svg>
+            </div>
+            <span>View Product</span>
+        </div>
+    </div>
     
 </body>
 </html>
